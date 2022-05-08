@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="applicable-device" content="pc,mobile">
+    <title>站长导航资源网</title>
+
+    <link rel="stylesheet" href="http://blog.image.codedemo.vip/navigation/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="http://blog.image.codedemo.vip/navigation/css/style.css" type="text/css">
+
+    <script src="http://blog.image.codedemo.vip/navigation/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<div id="mask"></div>
+<p class="index-breadcrumb"></p>
+<div id="banner-bear" class="preserve3d csstransforms3d">
+    <p class="typing web-font transition">免费收录站长们的网站</p>
+    <div class="primary-menus">
+        <ul class="selects">
+            <li>常用</li>
+            <li  data-target="search_1"><span>百度</span></li>
+            <li class="current" data-target="search_2"><span>Bing</span></li>
+            <li data-target="search_3"><span>360</span></li>
+            <li data-target="search_4"><span>搜狗</span></li>
+            <li data-target="search_5"><span>天猫</span></li>
+            <li data-target="search_6"><span>淘宝</span></li>
+            <li data-target="search_7"><span>知乎</span></li>
+        </ul>
+        <div class="cont">
+            <div class="left-cont">
+                <form class="search hidden " id="search_1" action="https://www.baidu.com/s?wd=" method="get" target="_blank">
+                    <input type="text" name="wd" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">百度搜索</button>
+                </form>
+                <form class="search " id="search_2" action="https://cn.bing.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">Bing搜索</button>
+                </form>
+                <form class="search hidden" id="search_3" action="https://www.so.com/s?q=" method="get" target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">360搜索</button>
+                </form>
+                <form class="search hidden" id="search_4" action="https://www.sogou.com/web?query=" method="get"
+                      target="_blank">
+                    <input type="text" name="query" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">搜狗搜索</button>
+                </form>
+                <form class="search hidden" id="search_5" action="https://list.tmall.com/search_product.htm?q="
+                      method="get" target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">天猫搜索</button>
+                </form>
+                <form class="search hidden" id="search_6" action="https://s.taobao.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">淘宝搜索</button>
+                </form>
+                <form class="search hidden" id="search_7" action="https://www.zhihu.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">知乎搜索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-wrap scenes-ready">
+        <div id="stage">
+            <div class="space"></div>
+            <div class="mountains">
+                <div class="mountain mountain-1"></div>
+                <div class="mountain mountain-2"></div>
+                <div class="mountain mountain-3"></div>
+            </div>
+            <div class="bear"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- 收录统计  -->
+    <div class="row row-position">
+        <div class="col-md-12">
+            {{TYPE}}
+
+        </div>
+    </div>
+    <div class="f-link part">
+        <p class="tt"><strong>友情链接</strong></p>
+        <ul id="flink" class="container">
+            {{FRIENDS_LINKS}}
+        </ul>
+    </div>
+</div>
+<div class="footer-copyright ">
+    <div class="container">
+        <p>
+            本站收录的网站若侵害到您的利益，请联系我们删除处理！| 联系QQ：6364544 请注明来意！
+            <br \="">
+            Copyright © 2021 站长导航资源网
+            <a target="_blank" rel="nofollow" href="http://beian.miit.gov.cn">豫ICP备12345678号</a>
+        </p>
+
+    </div>
+</div>
+<!--回顶-->
+<div id="backtop" class="fa fa-angle-up"></div>
+<script src="http://blog.image.codedemo.vip/navigation/js/main.js" type="text/javascript"></script>
+</body>
+</html>

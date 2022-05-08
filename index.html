@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="applicable-device" content="pc,mobile">
+    <title>站长导航资源网</title>
+
+    <link rel="stylesheet" href="http://blog.image.codedemo.vip/navigation/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="http://blog.image.codedemo.vip/navigation/css/style.css" type="text/css">
+
+    <script src="http://blog.image.codedemo.vip/navigation/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<div id="mask"></div>
+<p class="index-breadcrumb"></p>
+<div id="banner-bear" class="preserve3d csstransforms3d">
+    <p class="typing web-font transition">免费收录站长们的网站</p>
+    <div class="primary-menus">
+        <ul class="selects">
+            <li>常用</li>
+            <li  data-target="search_1"><span>百度</span></li>
+            <li class="current" data-target="search_2"><span>Bing</span></li>
+            <li data-target="search_3"><span>360</span></li>
+            <li data-target="search_4"><span>搜狗</span></li>
+            <li data-target="search_5"><span>天猫</span></li>
+            <li data-target="search_6"><span>淘宝</span></li>
+            <li data-target="search_7"><span>知乎</span></li>
+        </ul>
+        <div class="cont">
+            <div class="left-cont">
+                <form class="search hidden " id="search_1" action="https://www.baidu.com/s?wd=" method="get" target="_blank">
+                    <input type="text" name="wd" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">百度搜索</button>
+                </form>
+                <form class="search " id="search_2" action="https://cn.bing.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">Bing搜索</button>
+                </form>
+                <form class="search hidden" id="search_3" action="https://www.so.com/s?q=" method="get" target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">360搜索</button>
+                </form>
+                <form class="search hidden" id="search_4" action="https://www.sogou.com/web?query=" method="get"
+                      target="_blank">
+                    <input type="text" name="query" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">搜狗搜索</button>
+                </form>
+                <form class="search hidden" id="search_5" action="https://list.tmall.com/search_product.htm?q="
+                      method="get" target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">天猫搜索</button>
+                </form>
+                <form class="search hidden" id="search_6" action="https://s.taobao.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">淘宝搜索</button>
+                </form>
+                <form class="search hidden" id="search_7" action="https://www.zhihu.com/search?q=" method="get"
+                      target="_blank">
+                    <input type="text" name="q" class="s" placeholder="请输入关键词">
+                    <button type="submit" name="" class="btn">知乎搜索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-wrap scenes-ready">
+        <div id="stage">
+            <div class="space"></div>
+            <div class="mountains">
+                <div class="mountain mountain-1"></div>
+                <div class="mountain mountain-2"></div>
+                <div class="mountain mountain-3"></div>
+            </div>
+            <div class="bear"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- 收录统计  -->
+    <div class="row row-position">
+        <div class="col-md-12">
+            <div class="part" data-title="购物" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>购物</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.taobao.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="淘宝"></i>
+        </a>
+        <a class="a" href="https://www.taobao.com/" title="淘宝" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/淘宝.webp" alt="淘宝" title="淘宝">
+            <h3>淘宝</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.tmall.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="天猫"></i>
+        </a>
+        <a class="a" href="https://www.tmall.com/" title="天猫" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/天猫.webp" alt="天猫" title="天猫">
+            <h3>天猫</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.jd.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="京东"></i>
+        </a>
+        <a class="a" href="https://www.jd.com/" title="京东" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/京东.webp" alt="京东" title="京东">
+            <h3>京东</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.suning.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="苏宁易购"></i>
+        </a>
+        <a class="a" href="https://www.suning.com/" title="苏宁易购" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/苏宁易购.webp" alt="苏宁易购" title="苏宁易购">
+            <h3>苏宁易购</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="美食" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>美食</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.meishichina.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="美食天下"></i>
+        </a>
+        <a class="a" href="https://www.meishichina.com/" title="美食天下" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/美食天下.webp" alt="美食天下" title="美食天下">
+            <h3>美食天下</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.xiachufang.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="下厨房"></i>
+        </a>
+        <a class="a" href="https://www.xiachufang.com/" title="下厨房" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/下厨房.webp" alt="下厨房" title="下厨房">
+            <h3>下厨房</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.meishij.net/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="美食杰"></i>
+        </a>
+        <a class="a" href="https://www.meishij.net/" title="美食杰" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/美食杰.webp" alt="美食杰" title="美食杰">
+            <h3>美食杰</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="视频" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>视频</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://v.qq.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="腾讯视频"></i>
+        </a>
+        <a class="a" href="https://v.qq.com/" title="腾讯视频" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/腾讯视频.webp" alt="腾讯视频" title="腾讯视频">
+            <h3>腾讯视频</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.youku.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="优酷"></i>
+        </a>
+        <a class="a" href="https://www.youku.com/" title="优酷" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/优酷.webp" alt="优酷" title="优酷">
+            <h3>优酷</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.iqiyi.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="爱奇艺"></i>
+        </a>
+        <a class="a" href="https://www.iqiyi.com/" title="爱奇艺" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/爱奇艺.webp" alt="爱奇艺" title="爱奇艺">
+            <h3>爱奇艺</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.douyu.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="斗鱼"></i>
+        </a>
+        <a class="a" href="https://www.douyu.com/" title="斗鱼" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/斗鱼.webp" alt="斗鱼" title="斗鱼">
+            <h3>斗鱼</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.bilibili.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="哔哩哔哩"></i>
+        </a>
+        <a class="a" href="https://www.bilibili.com/" title="哔哩哔哩" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/哔哩哔哩.webp" alt="哔哩哔哩" title="哔哩哔哩">
+            <h3>哔哩哔哩</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.dy2018.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="电影天堂"></i>
+        </a>
+        <a class="a" href="https://www.dy2018.com/" title="电影天堂" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/电影.webp" alt="电影天堂" title="电影天堂">
+            <h3>电影天堂</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.youtube.com" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="YouTuBe"></i>
+        </a>
+        <a class="a" href="https://www.youtube.com" title="YouTuBe" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/YouTuBe.webp" alt="YouTuBe" title="YouTuBe">
+            <h3>YouTuBe</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.meijutt.tv/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="美剧天堂"></i>
+        </a>
+        <a class="a" href="https://www.meijutt.tv/" title="美剧天堂" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/美剧天堂.webp" alt="美剧天堂" title="美剧天堂">
+            <h3>美剧天堂</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="网络课程" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>网络课程</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.imooc.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="慕课网"></i>
+        </a>
+        <a class="a" href="https://www.imooc.com/" title="慕课网" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/慕课网.webp" alt="慕课网" title="慕课网">
+            <h3>慕课网</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.icourse163.org/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="中国Imooc大学"></i>
+        </a>
+        <a class="a" href="https://www.icourse163.org/" title="中国Imooc大学" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/中国Imooc大学.webp" alt="中国Imooc大学" title="中国Imooc大学">
+            <h3>中国Imooc大学</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://time.geekbang.org/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="极客时间"></i>
+        </a>
+        <a class="a" href="https://time.geekbang.org/" title="极客时间" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/极客时间.webp" alt="极客时间" title="极客时间">
+            <h3>极客时间</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="邮箱" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>邮箱</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://mail.qq.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="QQ邮箱"></i>
+        </a>
+        <a class="a" href="https://mail.qq.com/" title="QQ邮箱" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/QQ邮箱.webp" alt="QQ邮箱" title="QQ邮箱">
+            <h3>QQ邮箱</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://work.weixin.qq.com/mail/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="腾讯企业邮"></i>
+        </a>
+        <a class="a" href="https://work.weixin.qq.com/mail/" title="腾讯企业邮" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/腾讯企业邮.webp" alt="腾讯企业邮" title="腾讯企业邮">
+            <h3>腾讯企业邮</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://outlook.live.com/owa/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="微软 OutLook"></i>
+        </a>
+        <a class="a" href="https://outlook.live.com/owa/" title="微软 OutLook" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/OutLook.webp" alt="微软 OutLook" title="微软 OutLook">
+            <h3>微软 OutLook</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://mail.google.com" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="Gmail"></i>
+        </a>
+        <a class="a" href="https://mail.google.com" title="Gmail" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/Gmail.webp" alt="Gmail" title="Gmail">
+            <h3>Gmail</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="网盘" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>网盘</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://sso.qiniu.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="七牛云"></i>
+        </a>
+        <a class="a" href="https://sso.qiniu.com/" title="七牛云" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/七牛云.webp" alt="七牛云" title="七牛云">
+            <h3>七牛云</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://pc.woozooo.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="蓝奏云"></i>
+        </a>
+        <a class="a" href="https://pc.woozooo.com/" title="蓝奏云" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/蓝奏云.webp" alt="蓝奏云" title="蓝奏云">
+            <h3>蓝奏云</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://www.aliyundrive.com" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="阿里云盘"></i>
+        </a>
+        <a class="a" href="https://www.aliyundrive.com" title="阿里云盘" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/阿里云盘.webp" alt="阿里云盘" title="阿里云盘">
+            <h3>阿里云盘</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://pan.baidu.com" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="百度网盘"></i>
+        </a>
+        <a class="a" href="https://pan.baidu.com" title="百度网盘" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/百度网盘.webp" alt="百度网盘" title="百度网盘">
+            <h3>百度网盘</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="代码托管" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>代码托管</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="GitHub"></i>
+        </a>
+        <a class="a" href="https://github.com" title="GitHub" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="GitHub" title="GitHub">
+            <h3>GitHub</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://gitee.com/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="Gitee"></i>
+        </a>
+        <a class="a" href="https://gitee.com/" title="Gitee" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/Gitee.webp" alt="Gitee" title="Gitee">
+            <h3>Gitee</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://coding.net/" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="Coding"></i>
+        </a>
+        <a class="a" href="https://coding.net/" title="Coding" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/Coding.webp" alt="Coding" title="Coding">
+            <h3>Coding</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div><div class="part" data-title="GitHub精品项目收集" style="position: relative;">
+    <p class="tt" style="width: 1220px;">
+        <strong>GitHub精品项目收集</strong>
+    </p>
+    <div class="items">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/Genymobile/scrcpy/releases" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="Scrcpy"></i>
+        </a>
+        <a class="a" href="https://github.com/Genymobile/scrcpy/releases" title="Scrcpy" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/scrcpy.png" alt="Scrcpy" title="Scrcpy">
+            <h3>Scrcpy</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/2dust/v2rayN/releases" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="v2rayN"></i>
+        </a>
+        <a class="a" href="https://github.com/2dust/v2rayN/releases" title="v2rayN" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/v2rayNG.png" alt="v2rayN" title="v2rayN">
+            <h3>v2rayN</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/ja-netfilter/ja-netfilter/releases" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="JaNetfilter"></i>
+        </a>
+        <a class="a" href="https://github.com/ja-netfilter/ja-netfilter/releases" title="JaNetfilter" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="JaNetfilter" title="JaNetfilter">
+            <h3>JaNetfilter</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/alibaba/p3c" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="阿里巴巴Java规范"></i>
+        </a>
+        <a class="a" href="https://github.com/alibaba/p3c" title="阿里巴巴Java规范" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="阿里巴巴Java规范" title="阿里巴巴Java规范">
+            <h3>阿里巴巴Java规范</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/233boy/v2ray" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="v2ray"></i>
+        </a>
+        <a class="a" href="https://github.com/233boy/v2ray" title="v2ray" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/v2rayNG.png" alt="v2ray" title="v2ray">
+            <h3>v2ray</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/ohmyzsh/ohmyzsh" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="OhMyZsh"></i>
+        </a>
+        <a class="a" href="https://github.com/ohmyzsh/ohmyzsh" title="OhMyZsh" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/ohmyzsh.png" alt="OhMyZsh" title="OhMyZsh">
+            <h3>OhMyZsh</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/2dust/v2rayNG" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="v2rayNG"></i>
+        </a>
+        <a class="a" href="https://github.com/2dust/v2rayNG" title="v2rayNG" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/v2rayNG.png" alt="v2rayNG" title="v2rayNG">
+            <h3>v2rayNG</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/ThatGuySam/doesitarm" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="DoesItArm"></i>
+        </a>
+        <a class="a" href="https://github.com/ThatGuySam/doesitarm" title="DoesItArm" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="DoesItArm" title="DoesItArm">
+            <h3>DoesItArm</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/521xueweihan/GitHub520" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="GitHub520"></i>
+        </a>
+        <a class="a" href="https://github.com/521xueweihan/GitHub520" title="GitHub520" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="GitHub520" title="GitHub520">
+            <h3>GitHub520</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://raw.hellogithub.com/hosts" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="GitHub520Raw"></i>
+        </a>
+        <a class="a" href="https://raw.hellogithub.com/hosts" title="GitHub520Raw" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/GitHub.webp" alt="GitHub520Raw" title="GitHub520Raw">
+            <h3>GitHub520Raw</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div><div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="item">
+        <a class="link" target="_blank" href="https://github.com/oldj/SwitchHosts" rel="nofollow">
+            <i class="autoleft fa fa-angle-right" title="SwitchHosts"></i>
+        </a>
+        <a class="a" href="https://github.com/oldj/SwitchHosts" title="SwitchHosts" target="_blank">
+            <img src="https://blog.image.codedemo.vip/navigation/img/SwitchHosts.png" alt="SwitchHosts" title="SwitchHosts">
+            <h3>SwitchHosts</h3>
+<!--            <p>这里是描述文本</p>-->
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="f-link part">
+        <p class="tt"><strong>友情链接</strong></p>
+        <ul id="flink" class="container">
+            <li>
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+</li>
+        </ul>
+    </div>
+</div>
+<div class="footer-copyright ">
+    <div class="container">
+        <p>
+            本站收录的网站若侵害到您的利益，请联系我们删除处理！| 联系QQ：6364544 请注明来意！
+            <br \="">
+            Copyright © 2021 站长导航资源网
+            <a target="_blank" rel="nofollow" href="http://beian.miit.gov.cn">豫ICP备12345678号</a>
+        </p>
+
+    </div>
+</div>
+<!--回顶-->
+<div id="backtop" class="fa fa-angle-up"></div>
+<script src="http://blog.image.codedemo.vip/navigation/js/main.js" type="text/javascript"></script>
+</body>
+</html>
