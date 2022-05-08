@@ -1,0 +1,251 @@
+{
+  "types": [
+    {
+      "type_name": "购物",
+      "urls": [
+        {
+          "url_href": "https://www.taobao.com/",
+          "url_title": "淘宝",
+          "img_src": "./img/淘宝.webp"
+        },
+        {
+          "url_href": "https://www.tmall.com/",
+          "url_title": "天猫",
+          "img_src": "./img/天猫.webp"
+        },
+        {
+          "url_href": "https://www.jd.com/",
+          "url_title": "京东",
+          "img_src": "./img/京东.webp"
+        },
+        {
+          "url_href": "https://www.suning.com/",
+          "url_title": "苏宁易购",
+          "img_src": "./img/苏宁易购.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "美食",
+      "urls": [
+        {
+          "url_href": "https://www.meishichina.com/",
+          "url_title": "美食天下",
+          "img_src": "./img/美食天下.webp"
+        },
+        {
+          "url_href": "https://www.xiachufang.com/",
+          "url_title": "下厨房",
+          "img_src": "./img/下厨房.webp"
+        },
+        {
+          "url_href": "https://www.meishij.net/",
+          "url_title": "美食杰",
+          "img_src": "./img/美食杰.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "视频",
+      "urls": [
+        {
+          "url_href": "https://v.qq.com/",
+          "url_title": "腾讯视频",
+          "img_src": "./img/腾讯视频.webp"
+        },
+        {
+          "url_href": "https://www.youku.com/",
+          "url_title": "优酷",
+          "img_src": "./img/优酷.webp"
+        },
+        {
+          "url_href": "https://www.iqiyi.com/",
+          "url_title": "爱奇艺",
+          "img_src": "./img/爱奇艺.webp"
+        },
+        {
+          "url_href": "https://www.douyu.com/",
+          "url_title": "斗鱼",
+          "img_src": "./img/斗鱼.webp"
+        },
+        {
+          "url_href": "https://www.bilibili.com/",
+          "url_title": "哔哩哔哩",
+          "img_src": "./img/哔哩哔哩.webp"
+        },
+        {
+          "url_href": "https://www.dy2018.com/",
+          "url_title": "电影天堂",
+          "img_src": "./img/电影天堂.webp"
+        },
+        {
+          "url_href": "https://www.youtube.com",
+          "url_title": "YouTuBe",
+          "img_src": "./img/YouTuBe.webp"
+        },
+        {
+          "url_href": "https://www.meijutt.tv/",
+          "url_title": "美剧天堂",
+          "img_src": "./img/美剧天堂.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "网络课程",
+      "urls": [
+        {
+          "url_href": "https://www.imooc.com/",
+          "url_title": "慕课网",
+          "img_src": "./img/慕课网.webp"
+        },
+        {
+          "url_href": "https://www.icourse163.org/",
+          "url_title": "中国Imooc大学",
+          "img_src": "./img/中国Imooc大学.webp"
+        },
+        {
+          "url_href": "https://time.geekbang.org/",
+          "url_title": "极客时间",
+          "img_src": "./img/极客时间.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "邮箱",
+
+      "urls": [
+        {
+          "url_href": "https://mail.qq.com/",
+          "url_title": "QQ邮箱",
+          "img_src": "./img/QQ邮箱.webp"
+        },
+        {
+          "url_href": "https://work.weixin.qq.com/mail/",
+          "url_title": "腾讯企业邮",
+          "img_src": "./img/腾讯企业邮.webp"
+        },
+        {
+          "url_href": "https://outlook.live.com/owa/",
+          "url_title": "微软 OutLook",
+          "img_src": "./img/OutLook.webp"
+        },
+        {
+          "url_href": "https://mail.google.com",
+          "url_title": "Gmail",
+          "img_src": "./img/Gmail.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "网盘",
+      "urls": [
+        {
+          "url_href": "https://sso.qiniu.com/",
+          "url_title": "七牛云",
+          "img_src": "./img/七牛云.webp"
+        },
+        {
+          "url_href": "https://pc.woozooo.com/",
+          "url_title": "蓝奏云",
+          "img_src": "./img/蓝奏云.webp"
+        },
+        {
+          "url_href": "https://www.aliyundrive.com",
+          "url_title": "阿里云盘",
+          "img_src": "./img/阿里云盘.webp"
+        },
+        {
+          "url_href": "https://pan.baidu.com",
+          "url_title": "百度网盘",
+          "img_src": "./img/百度网盘.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "代码托管",
+      "urls": [
+        {
+          "url_href": "https://github.com",
+          "url_title": "GitHub",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://gitee.com/",
+          "url_title": "Gitee",
+          "img_src": "./img/Gitee.webp"
+        },
+        {
+          "url_href": "https://coding.net/",
+          "url_title": "Coding",
+          "img_src": "./img/Coding.webp"
+        }
+      ]
+    },
+    {
+      "type_name": "GitHub精品项目收集",
+      "urls": [
+        {
+          "url_href": "https://github.com/Genymobile/scrcpy/releases",
+          "url_title": "Scrcpy",
+          "img_src": "./img/scrcpy.png"
+        },
+        {
+          "url_href": "https://github.com/2dust/v2rayN/releases",
+          "url_title": "v2rayN",
+          "img_src": "./img/v2rayNG.png"
+        },
+        {
+          "url_href": "https://github.com/ja-netfilter/ja-netfilter/releases",
+          "url_title": "JaNetfilter",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://github.com/alibaba/p3c",
+          "url_title": "阿里巴巴Java规范",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://github.com/233boy/v2ray",
+          "url_title": "v2ray",
+          "img_src": "./img/v2rayNG.png"
+        },
+        {
+          "url_href": "https://github.com/ohmyzsh/ohmyzsh",
+          "url_title": "OhMyZsh",
+          "img_src": "./img/ohmyzsh.png"
+        },
+        {
+          "url_href": "https://github.com/2dust/v2rayNG",
+          "url_title": "v2rayNG",
+          "img_src": "./img/v2rayNG.png"
+        },
+        {
+          "url_href": "https://github.com/ThatGuySam/doesitarm",
+          "url_title": "DoesItArm",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://github.com/521xueweihan/GitHub520",
+          "url_title": "GitHub520",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://raw.hellogithub.com/hosts",
+          "url_title": "GitHub520Raw",
+          "img_src": "./img/GitHub.webp"
+        },
+        {
+          "url_href": "https://github.com/oldj/SwitchHosts",
+          "url_title": "SwitchHosts",
+          "img_src": "./img/SwitchHosts.png"
+        }
+      ]
+    }
+  ],
+  "friend_links": [
+    {
+      "url": "https://www.baidu.com",
+      "name": "百度"
+    }
+  ]
+}

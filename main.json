@@ -1,0 +1,204 @@
+{
+  "types": [
+    {
+      "type_name": "购物",
+      "urls": [
+        {
+          "url_href": "https://www.taobao.com/",
+          "url_title": "淘宝"
+        },
+        {
+          "url_href": "https://www.tmall.com/",
+          "url_title": "天猫"
+        },
+        {
+          "url_href": "https://www.jd.com/",
+          "url_title": "京东"
+        },
+        {
+          "url_href": "https://www.suning.com/",
+          "url_title": "苏宁易购"
+        }
+      ]
+    },
+    {
+      "type_name": "美食",
+      "urls": [
+        {
+          "url_href": "https://www.meishichina.com/",
+          "url_title": "美食天下"
+        },
+        {
+          "url_href": "https://www.xiachufang.com/",
+          "url_title": "下厨房"
+        },
+        {
+          "url_href": "https://www.meishij.net/",
+          "url_title": "美食杰"
+        }
+      ]
+    },
+    {
+      "type_name": "视频",
+      "urls": [
+        {
+          "url_href": "https://v.qq.com/",
+          "url_title": "腾讯视频"
+        },
+        {
+          "url_href": "https://www.youku.com/",
+          "url_title": "优酷"
+        },
+        {
+          "url_href": "https://www.iqiyi.com/",
+          "url_title": "爱奇艺"
+        },
+        {
+          "url_href": "https://www.douyu.com/",
+          "url_title": "斗鱼"
+        },
+        {
+          "url_href": "https://www.bilibili.com/",
+          "url_title": "哔哩哔哩"
+        },
+        {
+          "url_href": "https://www.dy2018.com/",
+          "url_title": "电影天堂"
+        },
+        {
+          "url_href": "https://www.youtube.com",
+          "url_title": "YouTuBe"
+        },
+        {
+          "url_href": "https://www.meijutt.tv/",
+          "url_title": "美剧天堂"
+        }
+      ]
+    },
+    {
+      "type_name": "网络课程",
+      "urls": [
+        {
+          "url_href": "https://www.imooc.com/",
+          "url_title": "慕课网"
+        },
+        {
+          "url_href": "https://www.icourse163.org/",
+          "url_title": "中国Imooc大学"
+        },
+        {
+          "url_href": "https://time.geekbang.org/",
+          "url_title": "极客时间"
+        }
+      ]
+    },
+    {
+      "type_name": "邮箱",
+      "urls": [
+        {
+          "url_href": "https://mail.qq.com/",
+          "url_title": "QQ邮箱"
+        },
+        {
+          "url_href": "https://work.weixin.qq.com/mail/",
+          "url_title": "腾讯企业邮"
+        },
+        {
+          "url_href": "https://outlook.live.com/owa/",
+          "url_title": "微软 OutLook"
+        },
+        {
+          "url_href": "https://mail.google.com",
+          "url_title": "Gmail"
+        }
+      ]
+    },
+    {
+      "type_name": "网盘",
+      "urls": [
+        {
+          "url_href": "https://sso.qiniu.com/",
+          "url_title": "七牛云"
+        },
+        {
+          "url_href": "https://pc.woozooo.com/",
+          "url_title": "蓝奏云"
+        },
+        {
+          "url_href": "https://www.aliyundrive.com",
+          "url_title": "阿里网盘"
+        },
+        {
+          "url_href": "https://pan.baidu.com",
+          "url_title": "百度网盘"
+        }
+      ]
+    },
+    {
+      "type_name": "代码托管",
+      "urls": [
+        {
+          "url_href": "https://github.com",
+          "url_title": "GitHub"
+        },
+        {
+          "url_href": "https://gitee.com/",
+          "url_title": "Gitee"
+        },
+        {
+          "url_href": "https://coding.net/",
+          "url_title": "Coding"
+        }
+      ]
+    },
+    {
+      "type_name": "GitHub精品项目收集",
+      "urls": [
+        {
+          "url_href": "https://github.com/Genymobile/scrcpy/releases",
+          "url_title": "scrcpy"
+        },
+        {
+          "url_href": "https://github.com/2dust/v2rayN/releases",
+          "url_title": "v2rayN"
+        },
+        {
+          "url_href": "https://github.com/ja-netfilter/ja-netfilter/releases",
+          "url_title": "JaNetfilter"
+        },
+        {
+          "url_href": "https://github.com/alibaba/p3c",
+          "url_title": "阿里巴巴Java规范"
+        },
+        {
+          "url_href": "https://github.com/233boy/v2ray",
+          "url_title": "v2ray"
+        },
+        {
+          "url_href": "https://github.com/ohmyzsh/ohmyzsh",
+          "url_title": "OhMyZsh"
+        },
+        {
+          "url_href": "https://github.com/2dust/v2rayNG",
+          "url_title": "v2rayNG"
+        },
+        {
+          "url_href": "https://github.com/ThatGuySam/doesitarm",
+          "url_title": "DoesItArm"
+        },
+        {
+          "url_href": "https://github.com/521xueweihan/GitHub520",
+          "url_title": "GitHub520"
+        },
+        {
+          "url_href": "https://raw.hellogithub.com/hosts",
+          "url_title": "GitHub520Raw"
+        },
+        {
+          "url_href": "https://github.com/oldj/SwitchHosts",
+          "url_title": "SwitchHosts"
+        }
+      ]
+    }
+  ]
+}
