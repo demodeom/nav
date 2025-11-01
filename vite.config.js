@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/nav/',  // 重要：设置基础路径
   plugins: [
     vue(),
     vueDevTools(),
