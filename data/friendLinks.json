@@ -1,0 +1,22 @@
+[
+  { "name": "技术博客", "url": "#", "icon": "fas fa-blog" },
+  { "name": "前端资源", "url": "#", "icon": "fab fa-html5" },
+  { "name": "后端开发", "url": "#", "icon": "fas fa-server" },
+  { "name": "UI设计", "url": "#", "icon": "fas fa-paint-brush" },
+  { "name": "产品经理", "url": "#", "icon": "fas fa-tasks" },
+  { "name": "人工智能", "url": "#", "icon": "fas fa-brain" },
+  { "name": "数据科学", "url": "#", "icon": "fas fa-chart-line" },
+  { "name": "网络安全", "url": "#", "icon": "fas fa-shield-alt" },
+  { "name": "云计算", "url": "#", "icon": "fas fa-cloud" },
+  { "name": "移动开发", "url": "#", "icon": "fas fa-mobile-alt" },
+  { "name": "区块链", "url": "#", "icon": "fas fa-link" },
+  { "name": "物联网", "url": "#", "icon": "fas fa-wifi" },
+  { "name": "DevOps", "url": "#", "icon": "fas fa-cogs" },
+  { "name": "开源社区", "url": "#", "icon": "fas fa-code-branch" },
+  { "name": "技术论坛", "url": "#", "icon": "fas fa-comments" },
+  { "name": "在线工具", "url": "#", "icon": "fas fa-tools" },
+  { "name": "学习平台", "url": "#", "icon": "fas fa-graduation-cap" },
+  { "name": "设计资源", "url": "#", "icon": "fas fa-palette" },
+  { "name": "字体库", "url": "#", "icon": "fas fa-font" },
+  { "name": "Font Awesome", "url": "https://fontawesome.com/", "icon": "fas fa-icons" }
+]

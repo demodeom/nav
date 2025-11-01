@@ -1,0 +1,33 @@
+[
+  {
+    "key": "bing",
+    "name": "必应",
+    "url": "https://www.bing.com/search?q=",
+    "icon": "fab fa-microsoft"
+  },
+  {
+    "key": "google",
+    "name": "谷歌",
+    "url": "https://www.google.com/search?q=",
+    "icon": "fab fa-google"
+  },
+  
+  {
+    "key": "baidu",
+    "name": "百度",
+    "url": "https://www.baidu.com/s?wd=",
+    "icon": "fas fa-search"
+  },
+  {
+    "key": "duckduckgo",
+    "name": "DuckDuckGo",
+    "url": "https://duckduckgo.com/?q=",
+    "icon": "fas fa-search"
+  },
+   {
+     "key": "sogou",
+     "name": "搜狗",
+     "url": "https://www.sogou.com/web?query=",
+     "icon": "fas fa-search"
+   }
+]

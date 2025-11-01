@@ -1,0 +1,187 @@
+[
+  {
+    "id": "LinuxDesktop",
+    "name": "Linux Desktop",
+    "icon": "fab  fa-linux",
+    "sites": [
+      {
+        "name": "Motrix",
+        "url": "https://flathub.org/en/apps/net.agalwood.Motrix",
+        "icon": "fas  fa-download",
+        "desc": "多线程下载工具"
+      },
+      {
+        "name": "qBittorrent",
+        "url": "https://flathub.org/en/apps/org.qbittorrent.qBittorrent",
+        "icon": "fas  fa-download",
+        "desc": "磁链、种子下载工具"
+      },
+      {
+        "name": "Free Download Manager",
+        "url": "https://www.freedownloadmanager.org/",
+        "icon": "fas  fa-download",
+        "desc": "一款功能强大的现代下载加速器"
+      },
+      {
+        "name": "Oh My ZSH",
+        "url": "https://ohmyz.sh/",
+        "icon": "fab  fa-linux",
+        "desc": "Oh My Zsh 是一个开源、社区驱动的框架，用于管理 Zsh 配置。"
+      },
+      {
+        "name": "Extension Manager",
+        "url": "https://flathub.org/en/apps/com.mattjakeman.ExtensionManager",
+        "icon": "fab  fa-linux",
+        "desc": "Oh My Zsh 是一个开源、社区驱动的框架，用于管理 Zsh 配置。"
+      }
+    ]
+  },
+  {
+    "id": "Android",
+    "name": "Android开发",
+    "icon": "fab  fa-android",
+    "sites": [
+      {
+        "name": "Android Studio",
+        "url": "https://developer.android.com/studio",
+        "icon": "fab  fa-android",
+        "desc": "Android 应用程序开发的官方IDE"
+      },
+      {
+        "name": "SDK Platform Tools",
+        "url": "https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn",
+        "icon": "fab  fa-android",
+        "desc": "Android SDK Platform-Tools"
+      },
+      {
+        "name": "Flutter",
+        "url": "https://developer.mozilla.org",
+        "icon": "fab fa-flutter",
+        "desc": "Flutter 中文开发文档"
+      },
+      {
+        "name": "Scrcpy",
+        "url": "https://github.com/Genymobile/scrcpy",
+        "icon": "fab fa-android",
+        "desc": "开源、免费Android投屏工具"
+      }
+    ]
+  },
+  {
+    "id": "media",
+    "name": "美剧、动漫",
+    "icon": "fas fa-play-circle",
+    "sites": [
+      {
+        "name": "美剧天堂",
+        "url": "https://www.imeijutt.tv/",
+        "icon": "fas fa-video",
+        "desc": "美剧在线观看、最新美剧下载！"
+      },
+      {
+        "name": "影视追番表",
+        "url": "https://oqbu7cbzd49.feishu.cn/wiki/GSYCwCgmvilGk7kEc1ecDypJnoe?table=tblvxmkq25JqvmMm&view=vew6pVLCgw",
+        "icon": "fab fa-behance",
+        "desc": "影视追番表-邵权"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com",
+        "icon": "fab fa-youtube",
+        "desc": "全球视频分享平台"
+      },
+      {
+        "name": "哔哩哔哩",
+        "url": "https://www.bilibili.com",
+        "icon": "fas fa-play-circle",
+        "desc": "视频弹幕网站"
+      },
+      {
+        "name": "优酷",
+        "url": "https://www.youku.com",
+        "icon": "fas fa-film",
+        "desc": "国内视频平台"
+      },
+      {
+        "name": "爱奇艺",
+        "url": "https://www.iqiyi.com",
+        "icon": "fas fa-tv",
+        "desc": "在线视频网站"
+      },
+      {
+        "name": "腾讯视频",
+        "url": "https://v.qq.com/",
+        "icon": "fas fa-tv",
+        "desc": "在线视频网站"
+      },
+      {
+        "name": "Twitch",
+        "url": "https://www.twitch.tv",
+        "icon": "fab fa-twitch",
+        "desc": "游戏直播平台"
+      }
+    ]
+  },
+  {
+    "id": "community",
+    "name": "社区论坛",
+    "icon": "fas fa-comments",
+    "sites": [
+      {
+        "name": "知乎",
+        "url": "https://www.zhihu.com",
+        "icon": "fab fa-zhihu",
+        "desc": "高质量问答社区"
+      },
+      {
+        "name": "Linux Do",
+        "url": "https://linux.do/",
+        "icon": "fas fa-code",
+        "desc": "新的理想型社区"
+      },
+      {
+        "name": "Medium",
+        "url": "https://medium.com",
+        "icon": "fab fa-medium",
+        "desc": "技术文章平台"
+      },
+      {
+        "name": "V2EX",
+        "url": "https://www.v2ex.com",
+        "icon": "fas fa-comments",
+        "desc": "创意工作者社区"
+      },
+      {
+        "name": "Reddit",
+        "url": "https://www.reddit.com",
+        "icon": "fab fa-reddit",
+        "desc": "社交新闻平台"
+      },
+      {
+        "name": "SegmentFault",
+        "url": "https://segmentfault.com",
+        "icon": "fas fa-code",
+        "desc": "开发者社区"
+      },
+      {
+        "name": "掘金",
+        "url": "https://juejin.cn",
+        "icon": "fas fa-digging",
+        "desc": "开发者技术社区"
+      }
+    ]
+  },
+  {
+    "id": "china",
+    "name": "国内镜像",
+    "icon": "fas fa-globe",
+    "sites": [
+      {
+        "name": "清华大学镜像",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/",
+        "icon": "fas fa-globe",
+        "desc": "清华大学镜像"
+      }
+    ]
+  }
+]
