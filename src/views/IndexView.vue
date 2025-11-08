@@ -28,36 +28,6 @@ const friendLinks = ref(friendLinksData)
 
     <SearchSection :search-engines="searchEngines"></SearchSection>
 
-    <!--    <section class="search-section">-->
-    <!--      <div class="search-container">-->
-    <!--        <div class="engine-selector" id="engineSelector">-->
-    <!--          <button class="engine-btn active" data-engine="baidu">-->
-    <!--            <i class="fab fa-baidu"></i> 百度-->
-    <!--          </button>-->
-    <!--          <button class="engine-btn" data-engine="bing">-->
-    <!--            <i class="fab fa-microsoft"></i> 必应-->
-    <!--          </button>-->
-    <!--          <button class="engine-btn" data-engine="google">-->
-    <!--            <i class="fab fa-google"></i> 谷歌-->
-    <!--          </button>-->
-    <!--          <button class="engine-btn" data-engine="sogou"><i class="fas fa-search"></i> 搜狗</button>-->
-    <!--          <button class="engine-btn" data-engine="duckduckgo">-->
-    <!--            <i class="fas fa-duck"></i> DuckDuckGo-->
-    <!--          </button>-->
-    <!--        </div>-->
-
-    <!--        <div class="search-box">-->
-    <!--          <input-->
-    <!--            type="text"-->
-    <!--            class="search-input"-->
-    <!--            id="searchInput"-->
-    <!--            placeholder="输入关键词，探索知识海洋..."-->
-    <!--          />-->
-    <!--          <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i> 搜索</button>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </section>-->
-
     <CategoriesSection :categories="categories" />
 
     <FriendLinksSection :friendLinks="friendLinks" />
