@@ -1,14 +1,22 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { onMounted, onUnmounted, reactive, ref } from 'vue'
 
 import searchEnginesData from '@/../data/searchEngines.json'
 import categoriesData from '@/../data/categories.json'
 import friendLinksData from '@/../data/friendLinks.json'
+import IndexedDB from '@/utils/indexedDB.js'
+import AddSearchEngineModal from '@/components/Manager/SearchEngine/addSearchEngineModal.vue'
+import DeleteModal from '@/components/Manager/DeleteModal.vue'
+import SearchEngineTable from '@/components/Manager/SearchEngineTable.vue'
+import CategoryTable from '@/components/Manager/CategoryTable.vue'
+import EditSearchEngineModal from '@/components/Manager/SearchEngine/editSearchEngineModal.vue'
 
 // 数据
 const searchEngines = ref([])
 const categories = ref([])
 const friendLinks = ref([])
+
+const currentModel = reactive({})
 
 searchEngines.value = searchEnginesData
 categories.value = categoriesData
@@ -26,13 +34,49 @@ const showAddModal = () => {
   addModalStatus.value = !addModalStatus.value
 }
 
+// 编辑模态框
+const editModalStatus = ref(false)
+const showEditModal = async (id) => {
+  currentDataIndex.value = id
+
+  switch (currentIndex.value) {
+    case 0:
+      // currentModel.value = await db.value.get('search_engines', currentDataIndex.value)
+      let editData = await db.value.get('search_engines', currentDataIndex.value)
+      currentModel.id = editData.id
+      currentModel.key = editData.key
+      currentModel.name = editData.name
+      currentModel.url = editData.url
+      currentModel.icon = editData.icon
+
+      console.log(currentModel.value)
+      break
+    case 1:
+      break
+    case 2:
+      break
+    case 3:
+      break
+    default:
+      console.log(currentDataIndex)
+      break
+  }
+
+  editModalStatus.value = !editModalStatus.value
+}
+
+const closeEditModal = () => {
+  editModalStatus.value = !editModalStatus.value
+
+}
+
 // 删除模态框
-const delDataIndex = ref('0')
+const currentDataIndex = ref(0)
 const delModalStatus = ref(false)
-const showDelModal = (dataIndex = '0') => {
+const showDelModal = (dataIndex) => {
   console.log(dataIndex)
+  currentDataIndex.value = dataIndex
   delModalStatus.value = !delModalStatus.value
-  delDataIndex.value = dataIndex
 }
 
 // 删除数据
@@ -40,25 +84,110 @@ const deleteData = () => {
   // console.log(delDataIndex.value)
   switch (currentIndex.value) {
     case 0:
-      searchEngines.value.splice(delDataIndex.value, 1)
+      deleteSearchEngine(currentDataIndex.value)
       break
     case 1:
-      categories.value.splice(delDataIndex.value, 1)
+      categories.value.splice(currentDataIndex.value, 1)
       break
     case 2:
-      let indexArr = delDataIndex.value.split('-')
+      let indexArr = currentDataIndex.value.split('-')
       let categoryIndex = Number(indexArr[0])
       let siteIndex = Number(indexArr[1])
       categories.value[categoryIndex].sites.splice(siteIndex, 1)
       break
     case 3:
-      friendLinks.value.splice(delDataIndex.value, 1)
+      friendLinks.value.splice(currentDataIndex.value, 1)
       break
     default:
-      console.log(delDataIndex)
+      console.log(currentDataIndex)
       break
   }
   showDelModal()
+}
+
+const loading = ref(true)
+const db = ref(null)
+
+const initDB = async () => {
+  try {
+    db.value = new IndexedDB('UserDatabase', 1)
+    await db.value.open()
+    // this.$message.success('数据库初始化成功！');
+  } catch (error) {
+    console.error('数据库初始化失败:', error)
+    // this.$message.error('数据库初始化失败！');
+  }
+}
+
+// 生命周期
+onMounted(async () => {
+  await initDB()
+  await loadSearchEngines()
+})
+
+onUnmounted(() => {
+  if (db.value) {
+    db.value.close()
+  }
+})
+
+const newSearchEngine = reactive({
+  id: 0,
+  key: 'bing',
+  name: '必应',
+  url: 'https://www.bing.com/search?q=',
+  icon: 'fab fa-microsoft',
+})
+
+const loadSearchEngines = async () => {
+  if (!db.value) return
+  loading.value = true
+  try {
+    searchEngines.value = await db.value.getAll('search_engines')
+  } catch (error) {
+    console.error('加载用户失败:', error)
+    // showMessage('error', '加载用户失败！')
+  } finally {
+    console.log(searchEngines.value)
+    loading.value = false
+  }
+}
+
+// 保存用户（添加或更新）
+const saveSearchEngine = async (newSearchEngine) => {
+  if (!db.value) {
+    console.log('warning', '请先初始化数据库！')
+    return
+  }
+  try {
+    const userData = {
+      key: newSearchEngine.key,
+      name: newSearchEngine.name,
+      url: newSearchEngine.url,
+      icon: newSearchEngine.icon,
+    }
+    console.log(userData)
+    await db.value.add('search_engines', userData)
+    console.log('success', '搜索引擎添加成功！')
+    showAddModal()
+    await loadSearchEngines()
+  } catch (error) {
+    console.error('保存搜索引擎添失败:', error)
+    // showMessage('error', '保存用户失败！')
+  }
+}
+
+// 删除用户
+const deleteSearchEngine = async (id) => {
+  try {
+    await db.value.delete('search_engines', id)
+    // showMessage('success', '用户删除成功！')
+    console.log('success', '用户删除成功！')
+    await loadSearchEngines()
+  } catch (error) {
+    console.error('删除用户失败:', error)
+    // showMessage('error', '删除用户失败！')
+  }
 }
 </script>
 
@@ -68,9 +197,9 @@ const deleteData = () => {
 
   <div class="container">
     <header>
-<!--      <h1 class="logo">TECH NAVIGATOR</h1>-->
+      <!--      <h1 class="logo">TECH NAVIGATOR</h1>-->
       <h1 class="logo">管理后台 · 个性化导航配置</h1>
-<!--      <p class="tagline">管理后台 · 个性化导航配置</p>-->
+      <!--      <p class="tagline">管理后台 · 个性化导航配置</p>-->
     </header>
 
     <div class="admin-nav">
@@ -109,80 +238,21 @@ const deleteData = () => {
     </div>
 
     <!-- 搜索引擎管理 -->
-    <section class="admin-section" :class="{ active: currentIndex === 0 }" id="search-engines">
-      <!--      <h2 class="section-title">搜索引擎管理</h2>-->
-
-      <button class="add-btn" @click="showAddModal" id="add-engine-btn">
-        <i class="fas fa-plus"></i> 添加搜索引擎
-      </button>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th style="width: 20%">名称</th>
-            <th style="width: 20%">标识符</th>
-            <th style="width: 20%">搜索URL</th>
-            <th style="width: 20%">图标</th>
-            <th style="width: 20%">操作</th>
-          </tr>
-        </thead>
-        <tbody id="engines-list">
-          <!-- 搜索引擎列表将通过JS动态生成 -->
-          <tr v-for="(searchEngine, index) in searchEngines" :key="index">
-            <td>{{ searchEngine.name }}</td>
-            <td>{{ searchEngine.name }}</td>
-            <td style="text-wrap: nowrap; overflow: hidden; ">{{ searchEngine.url }}</td>
-            <td><i :class="searchEngine.icon"></i></td>
-            <td>
-              <button class="action-btn edit" onclick="openEngineModal('baidu')">
-                <i class="fas fa-edit"></i> 编辑
-              </button>
-              <button class="action-btn delete" @click="showDelModal(index)">
-                <i class="fas fa-trash"></i> 删除
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
+    <SearchEngineTable
+      :currentIndex="currentIndex"
+      :searchEngines="searchEngines"
+      @showDelModal="showDelModal"
+      @showAddModal="showAddModal"
+      @showEditModal="showEditModal"
+    ></SearchEngineTable>
     <!-- 书签分类管理 -->
-    <section class="admin-section" :class="{ active: currentIndex === 1 }" id="categories">
-      <!--      <h2 class="section-title">书签分类管理</h2>-->
-
-      <button class="add-btn" @click="showAddModal" id="add-category-btn">
-        <i class="fas fa-plus"></i> 添加分类
-      </button>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>分类名称</th>
-            <!--            <th>标识符</th>-->
-            <th>图标</th>
-            <th>书签数量</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody id="categories-list">
-          <!-- 分类列表将通过JS动态生成 -->
-          <tr v-for="(category, index) in categoriesData" :key="index">
-            <td>{{ category.name }}</td>
-            <!--            <td>{{ category.name }}</td>-->
-            <td><i :class="category.icon"></i></td>
-            <td>{{ category.sites.length }}</td>
-            <td>
-              <button class="action-btn edit" onclick="openCategoryModal('tech')">
-                <i class="fas fa-edit"></i> 编辑
-              </button>
-              <button class="action-btn delete" @click="showDelModal(index)">
-                <i class="fas fa-trash"></i> 删除
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <CategoryTable
+      :currentIndex="currentIndex"
+      :categories="categories"
+      @showDelModal="showDelModal"
+      @showAddModal="showAddModal"
+    >
+    </CategoryTable>
 
     <!-- 书签管理 -->
     <section class="admin-section" :class="{ active: currentIndex === 2 }" id="bookmarks">
@@ -215,7 +285,7 @@ const deleteData = () => {
               <td>{{ category.name }}</td>
               <!--              <td>{{ site.desc }}</td>-->
               <td>
-                <button class="action-btn edit" onclick="openBookmarkModal(1)">
+                <button class="action-btn edit" @click="showAddModal()">
                   <i class="fas fa-edit"></i> 编辑
                 </button>
                 <button
@@ -256,7 +326,7 @@ const deleteData = () => {
             <td>{{ friend.url }}</td>
             <td><i :class="friend.icon"></i></td>
             <td>
-              <button class="action-btn edit" onclick="openEngineModal('bing')">
+              <button class="action-btn edit" @click="showAddModal()">
                 <i class="fas fa-edit"></i> 编辑
               </button>
               <button class="action-btn delete" @click="showDelModal(index)">
@@ -273,62 +343,23 @@ const deleteData = () => {
     </footer>
   </div>
 
-  <!-- 搜索引擎模态框 -->
-  <div class="modal" :class="{ active: currentIndex === 0 && addModalStatus }" id="engine-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="engine-modal-title">添加搜索引擎</h3>
-        <button class="close-btn" @click="showAddModal" id="close-engine-modal">&times;</button>
-      </div>
-      <form id="engine-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">名称</label>
-            <input
-              type="text"
-              class="form-input"
-              id="engine-name"
-              placeholder="例如：百度"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label class="form-label">标识符</label>
-            <input
-              type="text"
-              class="form-input"
-              id="engine-id"
-              placeholder="例如：baidu"
-              required
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">搜索URL</label>
-            <input
-              type="text"
-              class="form-input"
-              id="engine-url"
-              placeholder="例如：https://www.baidu.com/s?wd="
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label class="form-label">图标类名</label>
-            <input
-              type="text"
-              class="form-input"
-              id="engine-icon"
-              placeholder="例如：fab fa-baidu"
-              required
-            />
-          </div>
-        </div>
-        <button type="submit" class="submit-btn"><i class="fas fa-save"></i> 保存搜索引擎</button>
-      </form>
-    </div>
-  </div>
+  <!-- 添加搜索引擎模态框 -->
+  <add-search-engine-modal
+    @save-search-engine="saveSearchEngine"
+    @close-modal="showAddModal"
+    @load-search-engines="loadSearchEngines"
+    :className="{ active: currentIndex === 0 && addModalStatus }"
+    :newSearchEngine="newSearchEngine"
+  ></add-search-engine-modal>
+
+  <!-- 编辑搜索引擎模态框 -->
+  <edit-search-engine-modal
+    :newSearchEngine="currentModel"
+    @save-search-engine="saveSearchEngine"
+    @close-modal="closeEditModal"
+    @load-search-engines="loadSearchEngines"
+    :className="{ active: currentIndex === 0 && editModalStatus }"
+  ></edit-search-engine-modal>
 
   <!-- 分类模态框 -->
   <div class="modal" :class="{ active: currentIndex === 1 && addModalStatus }" id="category-modal">
@@ -491,51 +522,14 @@ const deleteData = () => {
   </div>
 
   <!-- 删除确认模态框 -->
-  <div class="modal delete-modal" :class="{ active: delModalStatus }" id="delete-modal">
-    <div class="modal-content">
-      <div class="delete-icon">
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
-      <h3 class="delete-title" id="delete-title">确认删除</h3>
-      <p class="delete-text" id="delete-text">您确定要删除此项吗？此操作不可撤销。</p>
-      <div class="delete-actions">
-        <button class="cancel-btn" id="cancel-delete" @click="showDelModal()">取消</button>
-        <button class="confirm-delete-btn" @click="deleteData" id="confirm-delete">确认删除</button>
-      </div>
-    </div>
-  </div>
+  <delete-modal
+    :del-modal-status="delModalStatus"
+    @show-del-modal="showDelModal"
+    @delete-data="deleteData"
+  ></delete-modal>
 </template>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #0c1029, #161a40, #1c1e3e);
-  color: #e0e0ff;
-  min-height: 100vh;
-  padding: 20px;
-  position: relative;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(80, 60, 255, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(0, 195, 255, 0.15) 0%, transparent 40%);
-  z-index: -1;
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
