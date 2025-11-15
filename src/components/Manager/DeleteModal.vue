@@ -1,12 +1,10 @@
 <script setup>
-defineProps({
+const props = defineProps({
   delModalStatus: Boolean,
+  currentId: Number,
 })
 
-const emit = defineEmits(["showDelModal", "deleteData"])
-
-
-
+const emit = defineEmits(['showDelModal', 'deleteData'])
 </script>
 
 <template>
@@ -19,13 +17,16 @@ const emit = defineEmits(["showDelModal", "deleteData"])
       <p class="delete-text" id="delete-text">您确定要删除此项吗？此操作不可撤销。</p>
       <div class="delete-actions">
         <button class="cancel-btn" id="cancel-delete" @click="emit('showDelModal')">取消</button>
-        <button class="confirm-delete-btn" @click="emit('deleteData')" id="confirm-delete">
+        <button
+          class="confirm-delete-btn"
+          @click="emit('deleteData', props.currentId)"
+          id="confirm-delete"
+        >
           确认删除
         </button>
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped></style>

@@ -3,31 +3,11 @@ import { reactive } from 'vue'
 
 const props = defineProps({
   className: Object,
-  db: Object,
-  newSearchEngine:Object
+  newModel:Object
 })
 
-// const newSearchEngine = reactive({
-//   id: 0,
-//   key: 'bing',
-//   name: '必应',
-//   url: 'https://www.bing.com/search?q=',
-//   icon: 'fab fa-microsoft',
-// })
 
-const emit = defineEmits(["closeModal","saveSearchEngine"])
-
-const showAddModal = ()=>{
-  emit("closeModal")
-}
-
-const save = ()=>{
-  emit("saveSearchEngine", props.newSearchEngine)
-}
-
-
-
-
+const emit = defineEmits(["closeModal","addData"])
 
 </script>
 
@@ -37,7 +17,7 @@ const save = ()=>{
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="engine-modal-title">添加搜索引擎</h3>
-        <button class="close-btn" @click="showAddModal" id="close-engine-modal">&times;</button>
+        <button class="close-btn" @click="emit('closeModal')" id="close-engine-modal">&times;</button>
       </div>
       <form id="engine-form">
         <div class="form-row">
@@ -48,7 +28,7 @@ const save = ()=>{
               class="form-input"
               id="engine-name"
               placeholder="例如：百度"
-              v-model="props.newSearchEngine.name"
+              v-model="props.newModel.name"
               required
             />
           </div>
@@ -59,7 +39,7 @@ const save = ()=>{
               class="form-input"
               id="engine-id"
               placeholder="例如：baidu"
-              v-model="props.newSearchEngine.key"
+              v-model="props.newModel.key"
               required
             />
           </div>
@@ -72,7 +52,7 @@ const save = ()=>{
               class="form-input"
               id="engine-url"
               placeholder="例如：https://www.baidu.com/s?wd="
-              v-model="props.newSearchEngine.url"
+              v-model="props.newModel.url"
               required
             />
           </div>
@@ -83,12 +63,12 @@ const save = ()=>{
               class="form-input"
               id="engine-icon"
               placeholder="例如：fab fa-baidu"
-              v-model="props.newSearchEngine.icon"
+              v-model="props.newModel.icon"
               required
             />
           </div>
         </div>
-        <span class="submit-btn" @click="save"><i class="fas fa-save"></i> 保存搜索引擎</span>
+        <span class="submit-btn" @click="emit('addData',newModel )"><i class="fas fa-save"></i> 保存搜索引擎</span>
       </form>
     </div>
   </div>

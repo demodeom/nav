@@ -10,7 +10,7 @@ const props = defineProps({
   <section class="categories-section">
     <!--    <h2 class="section-title">网站分类</h2>-->
     <div class="categories-container" id="categoriesContainer">
-      <CategoryCardItem v-for="category in categories" :category="category"></CategoryCardItem>
+      <CategoryCardItem v-for="category in props.categories" :category="category"></CategoryCardItem>
     </div>
   </section>
 </template>

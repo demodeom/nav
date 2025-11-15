@@ -3,19 +3,11 @@ import { reactive } from 'vue'
 
 const props = defineProps({
   className: Object,
-  db: Object,
+  editModel: Object,
   newSearchEngine:Object
 })
 
-// const newSearchEngine = reactive({
-//   id: 0,
-//   key: 'bing',
-//   name: '必应',
-//   url: 'https://www.bing.com/search?q=',
-//   icon: 'fab fa-microsoft',
-// })
-
-const emit = defineEmits(["closeModal","saveSearchEngine"])
+const emit = defineEmits(["closeModal","updateData"])
 
 
 
@@ -38,7 +30,7 @@ const emit = defineEmits(["closeModal","saveSearchEngine"])
               class="form-input"
               id="engine-name"
               placeholder="例如：百度"
-              v-model="props.newSearchEngine.name"
+              v-model="props.editModel.name"
               required
             />
           </div>
@@ -49,7 +41,7 @@ const emit = defineEmits(["closeModal","saveSearchEngine"])
               class="form-input"
               id="engine-id"
               placeholder="例如：baidu"
-              v-model="props.newSearchEngine.key"
+              v-model="props.editModel.key"
               required
             />
           </div>
@@ -62,7 +54,7 @@ const emit = defineEmits(["closeModal","saveSearchEngine"])
               class="form-input"
               id="engine-url"
               placeholder="例如：https://www.baidu.com/s?wd="
-              v-model="props.newSearchEngine.url"
+              v-model="props.editModel.url"
               required
             />
           </div>
@@ -73,12 +65,12 @@ const emit = defineEmits(["closeModal","saveSearchEngine"])
               class="form-input"
               id="engine-icon"
               placeholder="例如：fab fa-baidu"
-              v-model="props.newSearchEngine.icon"
+              v-model="props.editModel.icon"
               required
             />
           </div>
         </div>
-        <span class="submit-btn" @click="emit('saveSearchEngine', props.newSearchEngine)"><i class="fas fa-save"></i> 保存搜索引擎</span>
+        <span class="submit-btn" @click="emit('updateData', props.editModel)"><i class="fas fa-save"></i> 保存搜索引擎</span>
       </form>
     </div>
   </div>
