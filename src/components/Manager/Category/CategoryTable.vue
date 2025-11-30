@@ -13,10 +13,10 @@ const db = ref(null)
 const modelData = ref([])
 const newModel = reactive({
   id: 0,
-  key: 'bing',
-  name: '必应',
-  url: 'https://www.bing.com/search?q=',
-  icon: 'fab fa-microsoft',
+  key: '',
+  name: '',
+  url: '',
+  icon: '',
 })
 const editModel = reactive({})
 const currentId = ref(0)
@@ -148,6 +148,7 @@ onBeforeMount(async () => {
     <table class="data-table">
       <thead>
         <tr>
+          <th>序号</th>
           <th>分类名称</th>
           <th>标识符</th>
           <th>图标</th>
@@ -157,9 +158,11 @@ onBeforeMount(async () => {
       </thead>
       <tbody id="categories-list">
         <!-- 分类列表将通过JS动态生成 -->
-        <tr v-for="(d, index) in modelData" :key="index">
-          <td>{{ d.key }}</td>
+        <tr v-for="(d, i) in modelData" :key="i">
+
+          <td>{{ i + 1}}</td>
           <td>{{ d.name }}</td>
+          <td>{{ d.key }}</td>
           <!--            <td>{{ category.name }}</td>-->
           <td><i :class="d.icon"></i></td>
           <!--        <td>{{ category.sites.length }}</td>-->

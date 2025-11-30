@@ -13,12 +13,12 @@ const db = ref(null)
 const modelData = ref([])
 const newModel = reactive({
   id: 0,
-  key: 'name',
-  categoryKey: "bing",
-  name: '必应',
-  url: 'https://www.bing.com/search?q=',
-  icon: 'fab fa-microsoft',
-  desc: "描述"
+  key: '',
+  categoryKey: "",
+  name: '',
+  url: '',
+  icon: '',
+  desc: ""
 })
 const editModel = reactive({})
 const currentId = ref(0)

@@ -14,9 +14,9 @@ const db = ref(null)
 const modelData = ref([])
 const newModel = reactive({
   id: 0,
-  name: 'bing',
-  url: 'https://www.bing.com/search?q=',
-  icon: 'fab fa-microsoft',
+  name: '',
+  url: '',
+  icon: '',
 })
 const editModel = reactive({})
 const currentId = ref(0)

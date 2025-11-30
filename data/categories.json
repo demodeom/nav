@@ -39,7 +39,7 @@
   {
     "id": "Android",
     "name": "Android开发",
-    "icon": "fab  fa-android",
+    "icon": "fab fa-android",
     "sites": [
       {
         "name": "Android Studio",

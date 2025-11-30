@@ -3,7 +3,7 @@ import { reactive, ref } from 'vue'
 
 import CategoriesSection from '@/components/Index/Category/CategoriesSection.vue'
 import FriendLinksSection from '@/components/Index/FriendLink/FriendLinksSection.vue'
-import Footer from '@/components/Index/Footer.vue'
+import Footer from '@/components/Footer.vue'
 import SearchSection from '@/components/Index/Search/SearchSection.vue'
 
 import searchEnginesData from '@/../data/searchEngines.json'

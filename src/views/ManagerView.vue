@@ -6,6 +6,8 @@ import SearchEngineTable from '@/components/Manager/SearchEngine/SearchEngineTab
 import CategoryTable from '@/components/Manager/Category/CategoryTable.vue'
 import BookmarkTable from '@/components/Manager/Bookmark/BookmarkTable.vue'
 import FriendLinkTable from '@/components/Manager/FriendLink/FriendLinkTable.vue'
+import Toolbar from '@/components/Toolbar.vue'
+import Footer from '@/components/Footer.vue'
 
 // 选项卡
 const currentIndex = ref(0)
@@ -80,9 +82,10 @@ const changeIndex = (val) => {
 
     </FriendLinkTable>
 
-    <footer>
-      <p>科技导航管理后台 © 2023 | 高效 · 简洁 · 个性化</p>
-    </footer>
+    <!-- 浮动工具条 -->
+    <Toolbar></Toolbar>
+
+    <Footer />
   </div>
 
 

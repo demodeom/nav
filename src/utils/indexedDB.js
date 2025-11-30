@@ -1,5 +1,5 @@
 class IndexedDB {
-  constructor(dbName, version = 2) {
+  constructor(dbName, version = 1) {
     this.dbName = dbName
     this.version = version
     this.db = null
